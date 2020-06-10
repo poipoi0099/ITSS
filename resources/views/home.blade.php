@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../bootstrap/fonts/material-icon/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="../bootstrap/css/style.css">
+	<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+	
 </head>
 <body>
 
@@ -37,7 +39,7 @@
 	<!--customjs-->
 	<script src="assets/dest/js/custom2.js"></script>
 	<script>
-	$(document).ready(function($) {    
+	$(document).ready(function(e) {    
 		$(window).scroll(function(){
 			if($(this).scrollTop()>150){
 			$(".header-bottom").addClass('fixNav')

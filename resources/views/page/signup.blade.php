@@ -19,12 +19,18 @@
 				</div>
 				<div class="form-group">
 					<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-					<input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" required/>
+					<div>
+						<input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" required/>
+					</div>
 				</div>
-				<div>
-				<label>upload avatar</label>
-				<input type="file" id="myFile" name="filename">
+
+				<div class="form-group">
+					<input type="file" id="img_up" style="display: none">
 				</div>
+				<div class="form-group">
+					<p id="Up_img" style="cursor: pointer;">Upload Avatar</p>
+				</div>
+				
 
 				<div class="form-group">
 					<input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
@@ -32,6 +38,7 @@
 				</div>
 				<div class="form-group form-button">
 					<input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+					<img id="output" width="200" />
 				</div>
 			</form>
 		</div>
@@ -41,7 +48,7 @@
 		</div>
 	</div>
 </div>
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="js/main.js"></script>
-
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../resources/js/signup.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 @endsection

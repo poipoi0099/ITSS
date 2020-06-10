@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/','UserController@home')->name('home');
+Route::get('/home','UserController@home')->name('home');
 Route::get('/login', 'UserController@showLogin')->name('login');
 
 
@@ -32,3 +32,7 @@ Route::get('signup',[
     'uses' => 'PageController@getSignUp'
 ]);
 
+Route::post('signup',[
+    'as'=> 'signup',
+    'uses' => 'PageController@postSignUp'
+]);

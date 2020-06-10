@@ -13,4 +13,12 @@ class PageController extends Controller
     public function getSignUp(){
         return view('page.signup');
     }
+
+    /*public function postSignUp(Request $req){
+        $this->validate(
+            [
+                'email'=>'required|email|'
+            ]
+        )
+    }*/
 }
