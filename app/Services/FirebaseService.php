@@ -33,5 +33,18 @@ class FirebaseService
             ->withDatabaseUri(config('services.firebase.database_url'))
             ->create();
     }
+    public function verifyPassword($email, $password)
+    {
+        try {
+            $response = $this->firebase->getAuth()->verifyPassword($email, $password);
+            return $response->uid;
+
+        } catch(FirebaseEmailExists $e) {
+            logger()->info('Error login to firebase: Tried to create an already existent user');
+        } catch(Exception $e) {
+            logger()->error('Error login to firebase: ' . $e->getMessage());
+        }
+        return false;
+    }
 
 }

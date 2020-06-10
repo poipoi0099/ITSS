@@ -18,9 +18,10 @@ Route::get('/login', 'UserController@showLogin')->name('login');
 
 Route::post('/auth', 'UserController@login')->name('auth');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('user', 'UserController@index');
+
 
 Route::get('index',[
     'as'=> 'HomePage',
@@ -32,7 +33,11 @@ Route::get('signup',[
     'uses' => 'PageController@getSignUp'
 ]);
 
+<<<<<<< HEAD
 Route::post('signup',[
     'as'=> 'signup',
     'uses' => 'PageController@postSignUp'
 ]);
+=======
+
+>>>>>>> 018587adf0e2ddae7dfa780df3ca6c4f86bdd1ae
