@@ -12,8 +12,23 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/signup','UserController@home')->name('showSignup');
 Route::get('/','UserController@home')->name('home');
 Route::get('/login', 'UserController@showLogin')->name('login');
 
+
 Route::post('/auth', 'UserController@login')->name('auth');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('index',[
+    'as'=> 'HomePage',
+    'uses' => 'PageController@getIndex'
+]);
+
+Route::get('signup',[
+    'as'=> 'signup',
+    'uses' => 'PageController@getSignUp'
+]);
+
