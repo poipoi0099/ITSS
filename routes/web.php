@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('index',[
+    'as'=> 'HomePage',
+    'uses' => 'PageController@getIndex'
+]);
+
+Route::get('signup',[
+    'as'=> 'signup',
+    'uses' => 'PageController@getSignUp'
+]);
